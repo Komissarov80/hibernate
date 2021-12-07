@@ -16,7 +16,9 @@ public class Main {
     public static void main(String[] args) throws SQLException {
         UserService userService = new UserServiceImpl();
         List<User> userList = new ArrayList<>();
+
         userService.createUsersTable();
+
         userService.saveUser("Ivan", "Ivanov", (byte) 20);
         System.out.println("User с именем – Ivan добавлен в базу данных");
 
